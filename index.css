@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   background-color:red ;
+ overflow: hidden;   
+
+}
+
+.gamecontainer{
+ background-image: url(village.png);
+ background-repeat:no-repeat ;
+background-size: 100vw 100vh;
+width: 100%;
+height: 100vh;
+}
+
+#scorecount{
+color: red;
+size: 200px;
+}
+
+
+
+.monkey{
+ background-image:url("mon.png");
+ background-repeat: no-repeat;
+ background-size: cover;
+ width: 233px; ;
+ height: 325px;
+ position: absolute;
+ bottom: 0%;
+ /* size:25px */
+} 
+.obstaicle{
+    background-image:url("dog_bg-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 330px;
+    height: 256px; 
+    position: absolute;
+    bottom: 0%;
+    left: 75%;
+    /* size: 5px; */
+   } 
+   .obstaicledog{
+    animation: obstaicledog 1.8s linear infinite;
+}
+
+.animatemonkey{
+    animation: monkey 0.5s linear;
+}
+@keyframes monkey{
+    0%{
+        bottom: 0%;
+    }
+    50%{
+        bottom:  75%;
+    }
+    100%{
+        bottom: 0%;
+        
+    }
+
+}
+
+@keyframes obstaicledog{
+    0%{
+        left:100%
+    }
+    100%{
+        left: -10%;
+    }
+
+
+}
+
+.gameover{
+    visibility: hidden;
+}
